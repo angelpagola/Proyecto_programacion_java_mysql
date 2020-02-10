@@ -44,6 +44,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         lbbar4 = new javax.swing.JLabel();
         lbcerrar = new javax.swing.JLabel();
         lbminimizar = new javax.swing.JLabel();
+        pnbar5 = new javax.swing.JPanel();
+        lbbar5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -65,7 +67,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("UNASAM ADMINISTRATIVOS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 40));
 
         pnbar1.setBackground(new java.awt.Color(0, 0, 102));
         pnbar1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 51, 255)));
@@ -103,7 +105,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel1.add(pnbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 150, 40));
+        jPanel1.add(pnbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 0, 150, 40));
 
         pnbar2.setBackground(new java.awt.Color(0, 0, 102));
         pnbar2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 51, 255)));
@@ -241,6 +243,44 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jPanel1.add(lbminimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1305, 5, -1, -1));
 
+        pnbar5.setBackground(new java.awt.Color(0, 0, 102));
+        pnbar5.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 51, 255)));
+
+        lbbar5.setBackground(new java.awt.Color(255, 255, 255));
+        lbbar5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lbbar5.setForeground(new java.awt.Color(255, 255, 255));
+        lbbar5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbbar5.setText("DOCENTES");
+        lbbar5.setToolTipText("");
+        lbbar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbbar5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lbbar5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lbbar5MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnbar5Layout = new javax.swing.GroupLayout(pnbar5);
+        pnbar5.setLayout(pnbar5Layout);
+        pnbar5Layout.setHorizontalGroup(
+            pnbar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnbar5Layout.createSequentialGroup()
+                .addComponent(lbbar5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        pnbar5Layout.setVerticalGroup(
+            pnbar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnbar5Layout.createSequentialGroup()
+                .addComponent(lbbar5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(pnbar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 150, 40));
+
         jPanel2.setBackground(new java.awt.Color(0, 0, 153));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 20));
@@ -374,16 +414,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btValidar1ActionPerformed
 
-    private void lbbar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseEntered
-        pnbar1.setBackground(Color.white);
-        lbbar1.setForeground(Color.black);
-    }//GEN-LAST:event_lbbar1MouseEntered
-
-    private void lbbar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseExited
-        pnbar1.setBackground(new Color(0, 0, 102));
-        lbbar1.setForeground(Color.white);
-    }//GEN-LAST:event_lbbar1MouseExited
-
     private void lbbar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar2MouseEntered
         pnbar2.setBackground(Color.white);
         lbbar2.setForeground(Color.black);
@@ -415,14 +445,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_lbbar4MouseExited
 
     private void lbbar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar2MouseClicked
-       CompraMaterial cm=new CompraMaterial();
-       cm.setVisible(true);
+        CompraMaterial cm = new CompraMaterial();
+        cm.setVisible(true);
     }//GEN-LAST:event_lbbar2MouseClicked
-
-    private void lbbar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseClicked
-        Trabajadores tr = new Trabajadores();
-        tr.setVisible(true);
-    }//GEN-LAST:event_lbbar1MouseClicked
 
     private void lbminimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbminimizarMouseClicked
         this.setExtendedState(ICONIFIED);
@@ -447,6 +472,34 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void lbcerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbcerrarMouseExited
         lbcerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Recursos/cerrar1.png")));
     }//GEN-LAST:event_lbcerrarMouseExited
+
+    private void lbbar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseExited
+        pnbar1.setBackground(new Color(0, 0, 102));
+        lbbar1.setForeground(Color.white);
+    }//GEN-LAST:event_lbbar1MouseExited
+
+    private void lbbar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseEntered
+        pnbar1.setBackground(Color.white);
+        lbbar1.setForeground(Color.black);
+    }//GEN-LAST:event_lbbar1MouseEntered
+
+    private void lbbar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar1MouseClicked
+        Trabajadores tr = new Trabajadores();
+        tr.setVisible(true);
+    }//GEN-LAST:event_lbbar1MouseClicked
+
+    private void lbbar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar5MouseClicked
+        Docentes d = new Docentes();
+        d.setVisible(true);
+    }//GEN-LAST:event_lbbar5MouseClicked
+
+    private void lbbar5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbbar5MouseEntered
+
+    private void lbbar5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbbar5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lbbar5MouseExited
 
     /**
      * @param args the command line arguments
@@ -500,12 +553,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lbbar2;
     private javax.swing.JLabel lbbar3;
     private javax.swing.JLabel lbbar4;
+    private javax.swing.JLabel lbbar5;
     private javax.swing.JLabel lbcerrar;
     private javax.swing.JLabel lbminimizar;
     private javax.swing.JPanel pnbar1;
     private javax.swing.JPanel pnbar2;
     private javax.swing.JPanel pnbar3;
     private javax.swing.JPanel pnbar4;
+    private javax.swing.JPanel pnbar5;
     private javax.swing.JTable tabla;
     private javax.swing.JTextField txBuscar;
     // End of variables declaration//GEN-END:variables

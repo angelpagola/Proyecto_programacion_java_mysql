@@ -61,7 +61,7 @@ public class CompraMaterial extends javax.swing.JFrame {
                 + cbomaterial.getSelectedItem() + "','" + cbomarca.getSelectedItem() + "', '" + cbocolor.getSelectedItem()
                 + "','" + cbofacultad.getSelectedItem() + "', " + txtcantidad.getText() + ",'" + ct.usuario + "');", 1));
         MostrarReservas();
-        ActualizarStock();
+        StockxMat();
     }
 
     /* public void Seleccionar() {
@@ -369,10 +369,10 @@ public class CompraMaterial extends javax.swing.JFrame {
 
     private void cbomaterialItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbomaterialItemStateChanged
         if (cbomaterial.getSelectedIndex() > 0) {
-            ActualizarStock();
+            StockxMat();
         }
     }//GEN-LAST:event_cbomaterialItemStateChanged
-    public void ActualizarStock() {
+    public void StockxMat() {
         lbstock.setText(control.DevolverRegistroDto("select stock from materiales where idTipMat=(select idTipMat from tipomaterial where nomTip='" 
                 + cbomaterial.getSelectedItem() + "') order by idmaterial desc limit 1;", 1));
     }
